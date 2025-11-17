@@ -26,7 +26,7 @@ app = FastAPI(title=os.getenv("APP_NAME", "MindWave API"))
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=[""https://piyushgh07.github.io","https://piyushgh07.github.io/Mindwave""],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -292,3 +292,4 @@ def get_user_context(session=Depends(get_session)):
         "neutral": "Hey 👋 just checking in — how are you feeling today?",
     }
     return {"message": messages[trend], "trend": trend, "dominant": dom, "recent_emotions": recent}
+
